@@ -63,6 +63,34 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
      <br>
      <br>
      <br>
-        <div>Database KTP Bumi</div>
+     <!--        <div th:insert="/menu :: main_menu"></div>-->
+        <div align="center"> Database KTP Bumi</div>
+        <a href="/create">Data Baru</a>
+        <a href="/search">Cari data</a>
+        <div class="table-responsive">
+            <table class="table align-middle">
+                <tr>
+                    <th>NIK</th>
+                    <th>Nama</th>
+                    <th>Alamat</th>
+                    <th>Tanggal Lahir</th>
+                    <th>Action</th>
+                </tr>
+                  <tr th:each="godata:${goData}">
+                      <td th:text="${godata.noktp}"></td>
+                      <td th:text="${godata.nama}"></td>
+                      <td th:text="${godata.alamat}"></td>
+                      <td th:text="${#calendars.format(godata.ttl,'dd-MMM-yyyy')}"></td>
+                      <td>
+                          <a href="/detil">Detail</a>
+                          <a href="/edit">Edit</a>
+                          <a href="/delete">Delete</a>
+                      </td>
+                </tr>
+            </table>
+        </div>
+        <br><!-- comment -->
+        <h1>DATA KTP Bumi</h1>
+        
     </body>
 </html>
