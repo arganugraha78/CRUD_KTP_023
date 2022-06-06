@@ -20,7 +20,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <!-- Navbar -->
 <nav class="navbar bg-light fixed-top">
  <div class="container-fluid">
-             <a class="navbar-brand" href="/data">Database</a>
+             <a class="navbar-brand" href="/read">Database</a>
              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
              <span class="navbar-toggler-icon"></span>
             </button>
@@ -35,7 +35,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="/read">Dummy</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -65,7 +65,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
      <br>
      <!--        <div th:insert="/menu :: main_menu"></div>-->
         <div align="center"> Database KTP Bumi</div>
-        <a href="/create">Data Baru</a>
+        <a th:href="@{/create}">Data Baru</a>
         <a href="/search">Cari data</a>
         <div class="table-responsive">
             <table class="table align-middle">
