@@ -88,11 +88,7 @@ public class DummyController {
        return "redirect:/read";
    }
     
-//    @DeleteMapping("/sepatu/{id}")
-//    public ResponseEntity<HttpStatus> deleteSepatuById(@PathVariable Long id){
-//        sepatu.deleteById(id);
-//        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-//    }
+
    @GetMapping("/edit/{id}")
     public String editDummy(Model model, @PathVariable("id") int id) throws Exception{
         Dummy dum = dummyController.findDummy(id);
@@ -116,12 +112,6 @@ public class DummyController {
         return "redirect:/read";
     }
      
-//    @RequestMapping("/filename")
-//    public Image getImageDetails(HttpServletRequest data ,@RequestParam("gambar") MultipartFile multipartFile) throws Exception{
-//        Dummy dum = new Dummy();
-//        String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
-//        byte[] image = multipartFile.getBytes();
-//        return "dummy/read";
-//    }
+
      
 }
